@@ -12,7 +12,12 @@
     }
     else{
         echo "nincs session...</br>";
-        $_SESSION["name"]="X";
+        if (($_POST["uName"]=="X")){
+            $_SESSION["name"]="X";
+        }
+        else{
+            echo "Hibás felhasználónév";
+        }
     ?>
         <form action="login.php" method="post">
         <label for="uName">Username</label>
