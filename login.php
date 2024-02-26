@@ -1,45 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-
+    <?php session_start(); ?>
 </head>
 <body>
-	<form action="auth.php" method="post">
-            <label for="userName">
-                  Username:
-              </label>
-            <input type="text"
-                   id="userName"
-                   name="userName"
-                   placeholder="Enter your Username" required>
- 
-            <label for="password">
-                  Password:
-              </label>
-            <input type="password"
-                   id="password"
-                   name="password"
-                   placeholder="Enter your Password" required>
- 
-            <div class="wrap">
-                <button type="submit"
-                        onclick="solve()">
-                    Submit
-                </button>
-            </div>
-        
-	</form>
-	<!-- <?php
-		$db_file = 'database/mydb.sqlite';
-		if (file_exists($db_file)){
-			echo "Content";
-		} else{
-			echo "<button onclick='window.location.href=\"./install/createDB.php\"'>Telepítés!</button>";
-		}
+    <?php
+    if (isset($_SESSION["name"])){
+        echo "Van session...</br>";
+        echo "Logged in: ".$_SESSION["name"];
+        $_SESSION["name"]=null;
+    }
+    else{
+        echo "nincs session...</br>";
+        $_SESSION["name"]="X";
+    ?>
+        <form action="login.php" method="post">
+        <label for="uName">Username</label>
+        <input type="text" placeholder="Enter Username" name="uName" required>
+        <label for="pw">Password</label>
+        <input type="password" placeholder="Enter password" name="pw" required>
+        <button type="submit">Login</button>
+    </form>
+    <?php
+    }
+    echo "<pre>";
+    print_r($_SESSION);
+    echo "</pre>";
+    ?>
 
-	?>
--->
-<script src="start.js"></script>
-<!--<button onclick="window.location.href='./install/createDB.php'">Telepítés!</button>-->
 </body>
 </html>
