@@ -13,7 +13,7 @@
         echo "No user was logged in...</br>";
     }
     ?>
-    <a href="login.php">login</a>
+    <a href="index.php">login</a>
 
 </body>
 </html>

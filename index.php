@@ -3,7 +3,7 @@
 <?php //require_once("../includes/functions.php"); ?>
 
 <?php $layout_context = "public"; ?>
-<?php include("./includes/layouts/header.php"); ?>
+<?php include("./layouts/header.php"); ?>
 <?php //find_selected_page(true); ?>
 
 <div id="main">
@@ -24,4 +24,4 @@
   </div>
 </div>
 
-<?php include("./includes/layouts/footer.php"); ?>
+<?php include("./layouts/footer.php"); ?>
