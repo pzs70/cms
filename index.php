@@ -3,8 +3,10 @@
 <?php //require_once("../includes/functions.php"); ?>
 
 <?php $layout_context = "public"; ?>
+<?php $companyName="PZs"; ?>
 <?php include("./layouts/header.php"); ?>
 <?php //find_selected_page(true); ?>
+
 
 <div id="main">
   <div id="navigation">
